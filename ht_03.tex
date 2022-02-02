@@ -1,0 +1,145 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\usepackage{physics}
+\usepackage{dsfont}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+
+\usepackage[draft,inline,nomargin]{fixme} \fxsetup{theme=color}
+\definecolor{jacolor}{RGB}{200,40,0} 
+\FXRegisterAuthor{ja}{aja}{\color{jacolor}JA}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{José Alfredo de León}
+\title{Hoja de trabajo 2 \hspace{\fill}}
+\begin{document}
+%\maketitle
+\noindent
+\begin{tikzpicture}[x=1mm,y=1mm,overlay,remember picture]
+  \pgftransformshift{\pgfpointanchor{current page}{center}}
+  \node[inner sep=0pt] (usac) at (-76,108) %
+  {\includegraphics[height=25mm]{ecfmByN}};
+\end{tikzpicture}
+%\includegraphics[width=0.2\textwidth]{logo1}
+\hspace{23mm}
+\begin{tabular}{p{149mm}}
+Universidad de San Carlos de Guatemala \hspace*{\fill} Semestre 1, 2022 \\
+Escuela de Ciencias Físicas y Matemáticas  \\
+Mecánica Cuántica 1            \\
+Profesor: Rodolfo Samayoa      \\
+Auxiliar: José Alfredo de León \\
+\end{tabular}
+
+\begin{center}
+\bf\Large Hoja de trabajo 3
+\end{center}
+
+\noindent
+\textcolor{jacolor}{
+Para el taller: 
+\begin{itemize}
+\item Revisar 
+\end{itemize}
+}
+
+\noindent\textbf{Indicaciones importantes:}
+\begin{itemize}
+\item No se calificará su procedimiento. Su calificación será proporcional
+a la cantidad de incisos completos que resuelva. Por esto, 
+deberá identificar bien (con color distinto, por ejemplo) el inciso que 
+esté resolviendo.
+\end{itemize}
+
+\subsubsection*{Ejercicio 1. Pozo de potencial infinito.}
+Una partícula de masa $m$ está sujeta al potencial 
+\begin{align}
+V(x)= \left\{ \begin{array}{lc}
+             0, &   \abs{x}<a/2 \\
+             \infty, &  \abs{x}>a/2. 
+             \end{array}
+   \right.
+\end{align}
+\begin{enumerate}
+\item Encuentre las funciones de onda del estado fundamental, del primer 
+y del segundo estado excitado.
+\item Encuentre las expresiones para $E_1$, $E_2$ y $E_3$.
+\item Encuentre los valores esperados 
+$\expval{x}$ y $\expval{p}$ para el primer y segundo 
+estado excitado.
+\item Evalúe $\Delta x\Delta p$ para el primer y segundo estado 
+excitado.
+\end{enumerate}
+
+\subsection*{Ejercicio 2. Un electrón a través de una barrera de potencial.}
+Considere el potencial 
+\begin{align}
+V(x)= \left\{ \begin{array}{lc}
+             6\text{ eV}, &   x<0 \\
+             0, &  x>0. 
+             \end{array}
+   \right.
+\end{align}
+\begin{enumerate}
+\item Un electrón con energía de $8$ eV se mueve de izquierda a derecha
+en este potencial. Calcule la probabilidad de que el electrón i. continúe 
+moviéndose en la dirección inicial al pasar la grada de potencial y 
+ii. de ser reflejada por la grada de potencial.
+\item Ahora suponga que el electrón se mueve de derecha a izquierda con 
+una energía de 3 eV. i. Estime el orden de magnitud de la distancia que 
+el electrón penetraría la barrera. ii. Repita la parte i. para una persona
+de 70 kg que se mueve inicialmente a 4 m$/$s y corre hacia la pared que 
+puede representarse por una grada de potencial de altura igual a cuatro veces
+la energía de este individuo antes de aproximarse a la grada. 
+\end{enumerate}
+
+\subsection*{Ejercicio 3. Una partícula en un potencial infinito.}
+Considere una partícula de masa $m$ que se mueve en un pozo de potencial infinito
+unidimensional con paredes en $x=0$ y $x=a$, que se encuentra inicialmente en el 
+estado 
+\begin{align}
+\psi(x,0)=\frac{1}{\sqrt{2}}\big[\phi_1(x)+\phi_3(x) \big],
+\end{align}
+donde $\phi_1(x)$ y $\phi_3(x)$ son el estado fundamental y el segundo estado 
+excitado, respectivamente. 
+\begin{enumerate}
+\item Escriba la función de onda para el estado de la partícula para un tiempo 
+$t>0$. 
+\item Encuentre los valores esperados de $x$, $p$, $x^2$ y $p^2$.
+\item Evalúe $\Delta x\Delta p$ y verifique que satisface el principio de incertidumbre.
+\end{enumerate}
+
+\subsection*{Ejercicio 4. Pozo de potencial finito.}
+Considere una partícula de masa $m$ y energía $E$ sujeta al potencial 
+\begin{align}
+V(x)= \left\{ \begin{array}{rl}
+             0, &   \quad x<a \\
+             -V_0, &  \quad -a<x<a\\
+             0,	   &  \quad x>a
+             \end{array}
+   \right.
+\end{align}
+Calcule los coeficientes de reflexión y transmisión $R$ y $T$ y evalúe 
+qué ocurre cuando a. $E\gg V_0$, y b. $E\to 0$.
+
+\subsection*{Ejercicio 5. Un electrón en una caja.}
+Un electrón se mueve libremente adentro de un potencial infinito unidimensional 
+con paredes en $x=0$ y $x=a$. Si el electrón se encuentra inicialmente en el 
+estado fundamental ($n=1$) de la caja y súbitamente se cuadruplica el tamaño
+de la caja (es decir, la pared derecha de la caja se mueve de $x=a$ a $x=4a$)
+calcule la probabilidad de encontrar al electrón en
+\begin{enumerate}
+\item El estado fundamental de la nueva caja. 
+\item El primer estado excitado de la nueva caja. 
+\end{enumerate}
+
+
+\end{document}
