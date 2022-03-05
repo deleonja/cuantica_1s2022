@@ -1,0 +1,122 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\usepackage{physics}
+\usepackage{dsfont}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+
+\usepackage[draft,inline,nomargin]{fixme} \fxsetup{theme=color}
+\definecolor{jacolor}{RGB}{200,40,0} 
+\FXRegisterAuthor{ja}{aja}{\color{jacolor}JA}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{José Alfredo de León}
+\title{Hoja de trabajo 2 \hspace{\fill}}
+\begin{document}
+%\maketitle
+\noindent
+\begin{tikzpicture}[x=1mm,y=1mm,overlay,remember picture]
+  \pgftransformshift{\pgfpointanchor{current page}{center}}
+  \node[inner sep=0pt] (usac) at (-76,108) %
+  {\includegraphics[height=25mm]{ecfmByN}};
+\end{tikzpicture}
+%\includegraphics[width=0.2\textwidth]{logo1}
+\hspace{23mm}
+\begin{tabular}{p{149mm}}
+Universidad de San Carlos de Guatemala \hspace*{\fill} Semestre 1, 2022 \\
+Escuela de Ciencias Físicas y Matemáticas  \\
+Mecánica Cuántica 1            \\
+Profesor: Rodolfo Samayoa      \\
+Auxiliar: José Alfredo de León \\
+\end{tabular}
+
+\begin{center}
+\bf\Large Hoja de trabajo 3
+\end{center}
+
+\noindent
+\textcolor{jacolor}{
+Para el taller: 
+\begin{itemize}
+\item Revisar 
+\end{itemize}
+}
+
+\noindent\textbf{Indicaciones importantes:}
+\begin{itemize}
+\item Utilice su lenguaje de preferencia para realizar esta hoja de trabajo.
+Se sugiere utilizar Python o Mathematica.
+\item Google es su mejor aliado para navegar en la programación. 
+\item Existen librerías como Numpy para python que ya tienen implementadas
+muchas rutinas, úselas. De igual forma, Mathematica tiene muchas funciones.
+\end{itemize}
+
+\subsection*{Ejercicio 1. }
+Diseñe una rutina para generar una matriz cuadrada de dimensión $N\times N$
+con entradas complejas y aleatorias.
+
+\subsection*{Ejercicio 2. }
+\janote{Esto ya existe en Mathematica}
+Diseñe una rutina que revise la Hermiticidad de una matriz. La rutina
+deberá devolver el valor booleano \verb|True| o \verb|False|.
+
+\subsection*{Ejercicio 3.}
+Utilizando la rutina del ejercicio anterior genere 100 matrices de $10\times10$
+con entradas complejas y aleatorias y revise la Hermiticidad de dichas
+matrices.
+
+\subsection*{Ejercicio 4.}
+Diseñe una rutina para calcular la probabilidad de medir a un sistema
+en un estado 
+$\ket{\psi}=\mqty(\alpha_1&\dots&\alpha_n)^T$
+en el estado 
+$\ket{\phi}=\mqty(\beta_1&\dots&\beta_n)^T.$
+Esta rutina la utilizaremos luego dándole como entrada los eigenvectores que calculan las
+rutinas \verb|linalg.eig| del módulo Numpy o \verb|Eigenvectors| de Mathematica, 
+por lo que si está usando Python su rutina deberá asumir que $\ket{\psi}$
+es un vector no normalizado, y si está usando Mathematica deberá 
+asumir que tanto $\ket{\psi}$ como $\ket{\phi}$ son vectores no normalizados.
+
+Diseñe otra rutina para calcular la misma probabilidad, pero considerando
+que los eigenvalores pueden tener degeneración $d$, es decir, que $d$
+vectores $\ket{\phi_{j}}$
+\begin{align*}
+P=\sum_{i=1}^d\frac{\abs{\braket{\phi_i}{\psi}}^2}{\braket{\phi_i}{\phi_i}\braket{\psi}{\psi}}
+\end{align*}
+Es decir, queremos asumir que $\ket{\psi}$ y $\ket{\phi}$ son vectores
+no normalizados. Esto será útil en lenguajes como Mathematica en el cual
+la rutina \verb|Eigenvectors| devuelve los eigenvectores no normalizados
+de una matriz $M$.
+
+Para esto puede diseñar dos rutinas diferentes o puede utilizar el 
+\textit{polimorfismo} de los lenguajes de programación y diseñar 
+dos rutinas con el mismo nombre, pero con diferentes entradas.
+
+\subsection*{Ejercicio 5.}
+Rutina para calcular el proyector dado un conjunto de vectores. 
+Asumir que los vectores no están normalizados.
+
+\subsection*{Ejercicio 6.}
+Rutina para calcular valores de expectación dado un vector y un operador.
+
+\subsection*{Ejercicio }
+Con la rutina anterior diseñar otra rutina que implemente la incerteza.
+\janote{puede ser}
+
+\subsection*{Reto (x puntos extras netos)}
+Rutina para encontrar si un conjunto finito de observables forman un CSCO.
+
+\janote{También meter algo para hacer integrales.}
+
+
+
+\end{document}
